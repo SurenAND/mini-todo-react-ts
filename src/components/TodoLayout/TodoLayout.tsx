@@ -1,12 +1,12 @@
-import TodoInput from "../TodoInput/TodoInput";
+import TodoAdd from "../TodoAdd/TodoAdd";
 import Todos from "../Todos/Todos";
 
 const TodoLayout = () => {
   return (
-    <div>
-      <h2 className="text-2xl font-bold font-poppins-b">ToDo List</h2>
+    <div className="flex flex-col gap-3">
+      <h2 className="text-xl font-bold font-poppins-b">ToDo List</h2>
       <Todos />
-      <TodoInput />
+      <TodoAdd />
     </div>
   );
 };
