@@ -1,12 +1,14 @@
-type Props = {
+type SelectOptionProps = {
   values: string[];
 };
 
-const SelectOption = ({ values }: Props) => {
+const SelectOption = ({ values }: SelectOptionProps) => {
   return (
     <select className="font-semibold text-sm focus:outline-none">
-      {values.map((value) => (
-        <option value={value}>{value}</option>
+      {values.map((value, index) => (
+        <option key={index} value={value}>
+          {value}
+        </option>
       ))}
     </select>
   );
