@@ -1,6 +1,8 @@
 import Button from "../shared/Button/Button";
 
 type TodosProps = {
+  id: number;
+  deleteTodo: (id: number) => void;
   title: string;
   priority: string;
   isCompleted: boolean;
@@ -9,6 +11,8 @@ type TodosProps = {
 };
 
 function Todos({
+  id,
+  deleteTodo,
   title,
   priority,
   isCompleted,
@@ -34,7 +38,13 @@ function Todos({
           {priority}
         </div>
       </div>
-      <Button innerText="Delete" bgColor="red-500" textColor="white" py="0" />
+      <Button
+        innerText="Delete"
+        bgColor="red-500"
+        textColor="white"
+        py="0"
+        onClick={() => deleteTodo(id)}
+      />
     </div>
   );
 }
